@@ -1,0 +1,25 @@
+{
+  "pageNumber": 1,
+  "searchInput": "",
+  "currentPage": "home",
+  "savedMovies": [
+    {
+      "title": "Terminator",
+      "year": 2011,
+      "posterURL": "N/A",
+      "rate": 7,
+      "genre": "comedy"
+    },
+    {
+      "title": "Terminator-2",
+      "year": 2015,
+      "posterURL": "N/A",
+      "rate": 5,
+      "genre": "comedy"
+    }
+  ],
+  "foundMovies": {
+    "fetching": false,
+    "moviesResponse": {}
+  }
+}
