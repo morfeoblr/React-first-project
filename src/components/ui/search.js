@@ -3,7 +3,10 @@ import MoviesList from '../containers/moviesList';
 import ViewOptions from '../containers/viewOptions';
 import Filters from '../containers/filters';
 
-const Search = () => {
+const Search = ({ searchInput, updateCurrentPage = f => f, updateFoundMovies = f => f }) => {
+
+  updateCurrentPage('search');
+  updateFoundMovies(searchInput);
 
   return (
     <article>

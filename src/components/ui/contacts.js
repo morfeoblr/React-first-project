@@ -1,6 +1,9 @@
 import React from 'react'
 
-const contacts = () => {
+const contacts = ({ updateCurrentPage = f => f }) => {
+
+  updateCurrentPage('contacts');
+
   return (
     <article>
       <h2>Contacts to be here!</h2>

@@ -1,8 +1,8 @@
 import React from 'react';
-import Home from './home';
-import Search from './search';
-import Favorites from './favorites';
-import Contacts from './contacts';
+import Home from '../containers/home';
+import Search from '../containers/search';
+import Favorites from '../containers/favorites';
+import Contacts from '../containers/contacts';
 import { Route, Switch } from 'react-router-dom';
 import { Whoops404 } from '../index';
 
@@ -11,33 +11,10 @@ const MainContent = ({ currentPage = 'home', searchInput = '',
   return (
     <main>
       <Switch>
-        <Route exact path="/" render={() => {
-          if (currentPage !== 'home') updateCurrentPage('home');
-          return <Home />
-        }
-        }
-        />
-        <Route exact path="/search" render={() => {
-          if (currentPage !== 'search') {
-            updateCurrentPage('search');
-            updateFoundMovies(searchInput);
-          }
-          return <Search />
-        }
-        }
-        />
-        <Route exact path="/favorites" render={() => {
-          if (currentPage !== 'favorites') updateCurrentPage('favorites');
-          return <Favorites />
-        }
-        }
-        />
-        <Route exact path="/contacts" render={() => {
-          if (currentPage !== 'contacts') updateCurrentPage('contacts');
-          return <Contacts />
-        }
-        }
-        />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/search" component={Search} />
+        <Route exact path="/favorites" component={Favorites} />
+        <Route exact path="/contacts" component={Contacts} />
         <Route path="*" component={Whoops404} />
       </Switch>
       <aside>

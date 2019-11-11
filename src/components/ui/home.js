@@ -1,6 +1,9 @@
 import React from 'react';
 
-const home = () => {
+const home = ({ updateCurrentPage = f => f }) => {
+
+  updateCurrentPage('home');
+
   return (
     <article>
       <h2>Welcome to our portal!</h2>
