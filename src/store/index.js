@@ -7,15 +7,15 @@ const consoleMessages = store => next => action => {
   let result;
   console.groupCollapsed(`dispatching action => ${action.type}`);
   console.log('currentPage', store.getState().currentPage);
-  console.log('searchInput', store.getState().searchInput);
-  console.log('foundMovies', store.getState().foundMovies);
+  console.log('searchInput', store.getState().search.searchInput);
+  console.log('foundMovies', store.getState().search.foundMovies);
   result = next(action);
-  let { currentPage, searchInput, foundMovies } = store.getState();
+  let { currentPage, search } = store.getState();
   console.log(`
     current page: ${currentPage}
-    search input: ${searchInput}
-    fetching status: ${JSON.stringify(foundMovies.fetching)}
-    found movies: ${JSON.stringify(foundMovies)}
+    search input: ${search.searchInput}
+    fetching status: ${JSON.stringify(search.foundMovies.fetching)}
+    found movies: ${JSON.stringify(search.foundMovies)}
   `);
   console.groupEnd();
   return result;

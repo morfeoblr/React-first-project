@@ -5,7 +5,7 @@ import { changePage, updatePageNumber, getMovies } from '../../actions';
 const mapStateToProps = state =>
   ({
     currentPage: state.currentPage,
-    searchInput: state.searchInput,
+    searchInput: state.search.searchInput,
   })
 
 const mapDispatchToProps = dispatch =>

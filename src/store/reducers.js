@@ -60,12 +60,14 @@ export const moviesResponse = (state = {}, action) => {
 }
 
 export default combineReducers({
-  pageNumber,
-  searchInput,
   currentPage,
   savedMovies,
-  foundMovies: combineReducers({
-    fetching,
-    moviesResponse
+  search: combineReducers({
+    pageNumber,
+    searchInput,
+    foundMovies: combineReducers({
+      fetching,
+      moviesResponse
+    })
   })
 })

@@ -4,9 +4,9 @@ import { updateSearchInput, getMovies, updatePageNumber } from '../../actions';
 
 const mapStateToProps = state =>
   ({
-    searchInput: state.searchInput,
-    pageNumber: state.pageNumber,
-    foundMovies: state.foundMovies,
+    searchInput: state.search.searchInput,
+    pageNumber: state.search.pageNumber,
+    foundMovies: state.search.foundMovies,
   })
 
 const mapDispatchToProps = dispatch =>

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state =>
   ({
-    foundMovies: state.foundMovies,
+    foundMovies: state.search.foundMovies,
   })
 
 export default connect(mapStateToProps)(moviesList)
