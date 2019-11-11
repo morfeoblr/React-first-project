@@ -1,6 +1,6 @@
 import React from 'react';
 
-const filters = ({ searchInput = '', onUpdate = f => f }) => {
+const filters = ({ searchInput, onUpdate }) => {
   return (
     <div className="filters_sidebar">
       <div className="searchInput">

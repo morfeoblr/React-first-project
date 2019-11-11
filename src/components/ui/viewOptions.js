@@ -1,7 +1,7 @@
 import React from 'react';
 
 const viewOptions = ({ searchInput = '', pageNumber = 1, foundMovies = {},
-  resetFilters = f => f, onPageNumberUpdate = f => f }) => {
+  resetFilters, onPageNumberUpdate }) => {
 
   const errorWrapper = message => {
     if (message === 'Something went wrong.') return 'Please specify your Search using the filters below.';
