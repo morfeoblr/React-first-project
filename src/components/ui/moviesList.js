@@ -9,9 +9,8 @@ const moviesList = ({ foundMovies = {} }) => {
           <div className="spinner"></div>
           :
           foundMovies.moviesResponse.Response === 'True' ? <> {
-            foundMovies.moviesResponse.Search.map((movie) => <MovieTile movie={movie} />)
+            foundMovies.moviesResponse.Search.map(movie => <MovieTile movie={movie} />)
           }
-            }
           </>
             : <> No results found </>
         }

@@ -14,6 +14,10 @@ const viewOptions = ({ searchInput = '', pageNumber = 1, foundMovies = {},
     }
   }
 
+  const getNumberOfPages = (totalResults, itemsPerPage) => {
+    return Math.ceil(totalResults / itemsPerPage);
+  }
+
   return (
     <div className="view_options">
       <div className="filterButtons">
@@ -30,7 +34,7 @@ const viewOptions = ({ searchInput = '', pageNumber = 1, foundMovies = {},
                   onChange={hanldeNumberPageUpdate}></input>
               </div>
             </form>
-            <span>of {Math.ceil(foundMovies.moviesResponse.totalResults / 10)}</span>
+            <span>of {getNumberOfPages(foundMovies.moviesResponse.totalResults, 10)}</span>
           </div>
         </div>
         :
