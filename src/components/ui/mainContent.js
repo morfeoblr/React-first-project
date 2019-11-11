@@ -6,8 +6,7 @@ import Contacts from '../containers/contacts';
 import { Route, Switch } from 'react-router-dom';
 import { Whoops404 } from '../index';
 
-const MainContent = ({ currentPage = 'home', searchInput = '',
-  updateCurrentPage = f => f, updateFoundMovies = f => f }) => {
+const MainContent = () => {
   return (
     <main>
       <Switch>

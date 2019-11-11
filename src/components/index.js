@@ -1,6 +1,6 @@
 import Header from './ui/header';
 import NavigationMenu from './containers/navigationMenu';
-import MainContent from './containers/mainContent';
+import MainContent from './ui/mainContent';
 import Footer from './ui/footer';
 import './App.css';
 import React from 'react';
