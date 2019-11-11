@@ -2,6 +2,11 @@ import home from '../ui/home';
 import { connect } from 'react-redux';
 import { changePage } from '../../actions';
 
+const mapStateToProps = state =>
+  ({
+    currentPage: state.currentPage,
+  })
+
 const mapDispatchToProps = dispatch =>
   ({
     updateCurrentPage(page) {
@@ -11,4 +16,4 @@ const mapDispatchToProps = dispatch =>
     }
   })
 
-export default connect(null, mapDispatchToProps)(home)
+export default connect(mapStateToProps, mapDispatchToProps)(home)

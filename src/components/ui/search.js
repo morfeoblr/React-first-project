@@ -3,10 +3,12 @@ import MoviesList from '../containers/moviesList';
 import ViewOptions from '../containers/viewOptions';
 import Filters from '../containers/filters';
 
-const Search = ({ searchInput, updateCurrentPage = f => f, updateFoundMovies = f => f }) => {
+const Search = ({ currentPage, searchInput, updateCurrentPage, updateFoundMovies }) => {
 
-  updateCurrentPage('search');
-  updateFoundMovies(searchInput);
+  if (currentPage !== 'search') {
+    updateCurrentPage('search');
+    updateFoundMovies(searchInput);
+  }
 
   return (
     <article>

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const home = ({ updateCurrentPage = f => f }) => {
+const home = ({ currentPage, updateCurrentPage }) => {
 
-  updateCurrentPage('home');
+  if (currentPage !== 'home') updateCurrentPage('home')
 
   return (
     <article>

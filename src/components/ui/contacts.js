@@ -1,8 +1,8 @@
 import React from 'react'
 
-const contacts = ({ updateCurrentPage = f => f }) => {
+const contacts = ({ currentPage, updateCurrentPage }) => {
 
-  updateCurrentPage('contacts');
+  if (currentPage !== 'contacts') updateCurrentPage('contacts');
 
   return (
     <article>

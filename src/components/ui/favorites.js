@@ -1,8 +1,8 @@
 import React from 'react'
 
-const favorites = ({ updateCurrentPage = f => f }) => {
+const favorites = ({ currentPage, updateCurrentPage }) => {
 
-  updateCurrentPage('favorites');
+  if (currentPage !== 'favorites') updateCurrentPage('favorites')
 
   return (
     <article>
