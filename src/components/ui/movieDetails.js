@@ -25,18 +25,24 @@ class MovieDetails extends Component {
     }, 1000) // delay is set only for spinner verification
   }
 
-  render() {
+  getMovieDetailsInTags() {
     const { Title, Year, Released, Runtime, Genre, Actors, Plot, imdbRating, Type } = this.state.movie;
-    const movieFields = [];
-    movieFields.push(<div key="Title"><b>Title</b>: {Title}</div>);
-    movieFields.push(<div key="Year"><b>Year</b>: {Year}</div>);
-    movieFields.push(<div key="Released"><b>When released</b>: {Released}</div>);
-    movieFields.push(<div key="Runtime"><b>Time</b>: {Runtime}</div>);
-    movieFields.push(<div key="Genre"><b>Genre</b>: {Genre}</div>);
-    movieFields.push(<div key="Actors"><b>Main actors</b>: {Actors}</div>);
-    movieFields.push(<div key="Plot"><b>Full plot</b>: {Plot}</div>);
-    movieFields.push(<div key="imdbRating"><b>Imbd rating</b>: {imdbRating}</div>);
-    movieFields.push(<div key="Type"><b>Type</b>: {Type}</div>);
+    return (
+      <>
+        <div key="Title"><b>Title</b>: {Title}</div>
+        <div key="Year"><b>Year</b>: {Year}</div>
+        <div key="Released"><b>When released</b>: {Released}</div>
+        <div key="Runtime"><b>Time</b>: {Runtime}</div>
+        <div key="Genre"><b>Genre</b>: {Genre}</div>
+        <div key="Actors"><b>Main actors</b>: {Actors}</div>
+        <div key="Plot"><b>Full plot</b>: {Plot}</div>
+        <div key="imdbRating"><b>Imbd rating</b>: {imdbRating}</div>
+        <div key="Type"><b>Type</b>: {Type}</div>
+      </>
+    );
+  }
+
+  render() {
     return (
       <div className="modal" >
         <button className="close" onClick={this.props.close}>
@@ -48,7 +54,7 @@ class MovieDetails extends Component {
             <div className="spinner"></div>
             :
             <>
-              {movieFields}
+              {this.getMovieDetailsInTags()}
             </>
           }
         </div>
