@@ -2,7 +2,7 @@ import mainContent from '../ui/mainContent';
 import { connect } from 'react-redux';
 import { changePage, getMovies, updatePageNumber } from '../../actions';
 
-const mapStateToProps = (state) =>
+const mapStateToProps = state =>
   ({
     currentPage: state.currentPage,
     searchInput: state.searchInput,

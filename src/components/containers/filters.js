@@ -2,7 +2,7 @@ import filters from '../ui/filters';
 import { connect } from 'react-redux';
 import { updateSearchInput, getMovies, updatePageNumber } from '../../actions';
 
-const mapStateToProps = (state) =>
+const mapStateToProps = state =>
   ({
     searchInput: state.searchInput,
   })

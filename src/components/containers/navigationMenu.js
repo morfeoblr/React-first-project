@@ -1,7 +1,7 @@
 import navigationMenu from '../ui/navigationMenu';
 import { connect } from 'react-redux';
 
-const mapStateToProps = (state) =>
+const mapStateToProps = state =>
   ({
     currentPage: state.currentPage,
   })

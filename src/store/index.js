@@ -2,6 +2,7 @@ import appReducer from './reducers';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 
+// only for debugging
 const consoleMessages = store => next => action => {
   let result;
   console.groupCollapsed(`dispatching action => ${action.type}`);

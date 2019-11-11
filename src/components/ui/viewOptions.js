@@ -3,12 +3,12 @@ import React from 'react';
 const viewOptions = ({ searchInput = '', pageNumber = 1, foundMovies = {},
   resetFilters = f => f, onPageNumberUpdate = f => f }) => {
 
-  const errorWrapper = (message) => {
+  const errorWrapper = message => {
     if (message === 'Something went wrong.') return 'Please specify your Search using the filters below.';
     return message;
   }
 
-  const hanldeNumberPageUpdate = (e) => {
+  const hanldeNumberPageUpdate = e => {
     if (Number.isInteger(+e.target.value) && e.target.value > 0 && foundMovies.moviesResponse.totalResults >= (e.target.value - 1) * 10) {
       onPageNumberUpdate(searchInput, +e.target.value);
     }

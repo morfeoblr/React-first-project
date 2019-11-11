@@ -2,14 +2,14 @@ import viewOptions from '../ui/viewOptions';
 import { connect } from 'react-redux';
 import { updateSearchInput, getMovies, updatePageNumber } from '../../actions';
 
-const mapStateToProps = (state) =>
+const mapStateToProps = state =>
   ({
     searchInput: state.searchInput,
     pageNumber: state.pageNumber,
     foundMovies: state.foundMovies,
   })
 
-const mapDispatchToProps = (dispatch) =>
+const mapDispatchToProps = dispatch =>
   ({
     resetFilters() {
       dispatch(

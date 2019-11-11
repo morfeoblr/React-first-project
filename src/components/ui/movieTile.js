@@ -2,7 +2,7 @@ import React from 'react';
 import Popup from "reactjs-popup";
 import MovieDetails from "../ui/movieDetails";
 
-const movieTile = (props) => {
+const movieTile = props => {
   return (
     <div key={props.movie.imdbID} className="tileDisplay">
       <div className="tileItem">

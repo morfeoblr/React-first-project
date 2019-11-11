@@ -12,14 +12,14 @@ export const updateSearchInput = text =>
     payload: text
   })
 
-export function saveMovie(title, year, posterURL = 'N/A', rate = 'N/A', genre = 'N/A') {
+export const saveMovie = (title, year, posterURL = 'N/A', rate = 'N/A', genre = 'N/A') => {
   return {
     type: C.SAVE_MOVIE,
     payload: { title, year, posterURL, rate, genre }
   }
 }
 
-export const removeMovie = function (id) {
+export const removeMovie = id => {
   return {
     type: C.REMOVE_MOVIE,
     payload: id
@@ -49,6 +49,7 @@ export const getMovies = (input = '', pageNumber = 1) => dispatch => {
         dispatch({
           type: C.CANCEL_FETCHING
         })
+        // more handling could be added
       })
   }, 1000) // delay is set only for spinner verification
 }
